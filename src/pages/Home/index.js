@@ -1,4 +1,6 @@
 import "./home.css";
+import { Icon } from "../../components/Icons";
+import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 export default function Home() {
   return (
     <div className="home-container">
@@ -25,6 +27,19 @@ export default function Home() {
             <p className="link-text"> Canal Youtube</p>
           </a>
         </section>
+        <footer>
+          <Icon url="https://facebook.com/paulo.felipe">
+            <FaFacebook size={35} color="#FFF" />
+          </Icon>
+
+          <Icon url="https://Youtube/PauloFelipe">
+            <FaYoutube size={35} color="#FFF" />
+          </Icon>
+
+          <Icon url="https://instagram.com/paullofelipe_/">
+            <FaInstagram size={35} color="#FFF" />
+          </Icon>
+        </footer>
       </main>
     </div>
   );

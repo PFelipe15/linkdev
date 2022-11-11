@@ -37,12 +37,45 @@
   transition: transform 0.4s;
 }
 
-.link-text{
-font-size:16px ;
-min-height: 150%;
-color: black;
+.link-text {
+  font-size: 16px;
+  min-height: 150%;
+  color: black;
 }
 
-.link-area:hover{
-    transform:scale(1.04)
+.link-area:hover {
+  transform: scale(1.04);
+}
+
+.social-icons {
+  background-color: red;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin: 18 0 0;
+}
+
+@media screen and (max-width:550px) {
+  .home-container h1{
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .link-text{
+    font-size:16px
+  }
+}
+
+@media screen and (max-width:370px){
+.home-container h1{
+  font-size: 24px;
+  text-align: center;
+}
+
+.link-text{
+  font-size: 14px;
+}
 }
