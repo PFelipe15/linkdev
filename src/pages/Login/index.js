@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import {toast } from 'react-toastify'
 import Logo from "../../components/logo";
+import Input from "../../components/Input-text";
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -29,7 +30,7 @@ export default function Login() {
       <Logo />
 
       <form className="form" onSubmit={handleLogin}>
-        <input
+        <Input
           type="email"
           placeholder="Digite seu email"
           value={email}
@@ -37,7 +38,7 @@ export default function Login() {
             setEmail(e.target.value);
           }}
         />
-        <input
+        <Input
           type="password"
           placeholder="*********"
           autoComplete="on"
@@ -46,6 +47,7 @@ export default function Login() {
             setPassword(e.target.value);
           }}
         />
+        
         <button type="submit"> Acessar</button>
       </form>
     </div>

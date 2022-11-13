@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-
+import Private from "./routes/private";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Admin from "./pages/Admin";
@@ -17,8 +17,10 @@ const router = createBrowserRouter([
 
   {
     path: "/Admin",
-    element: <Admin />,
+    element:<Private>  <Admin /></Private>
   },
+
+
   {
     path: "*",
     element: <Error />,
