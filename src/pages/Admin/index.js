@@ -26,7 +26,7 @@ export default function Admin() {
   useEffect(() => {
     const linksRef = collection(db, "links");
     const queryRef = query(linksRef, orderBy("createdAt", "asc"));
-    const unsub = onSnapshot(queryRef, (snapshot) => {
+    onSnapshot(queryRef, (snapshot) => {
       let lista = [];
       snapshot.forEach((doc) => {
         lista.push({
@@ -66,8 +66,8 @@ export default function Admin() {
   }
 
   async function handleDeleteLink(id, name) {
-    const docRef = doc(db,"links", id)
-    await deleteDoc(docRef)
+    const docRef = doc(db, "links", id);
+    await deleteDoc(docRef);
     return toast.success(`${name} Detelado com sucesso!`);
   }
   return (
